@@ -35,13 +35,15 @@ newstomato_logo <- magick::image_read("data-raw/news_tomato_logo.svg")
 tomato_bg <- magick::image_read("data-raw/hex_bitTomato.jpg")
 
 tomato_bg <- tomato_bg %>%
-  image_resize(geometry = c(300, 300))
+  # image_resize(geometry = c(300, 300))
+  image_resize('25%x25%')
 
 ## 2.2. 로고 추가작업
 bitTomato_logo <- image_composite(tomato_bg,
-                newstomato_logo %>% image_resize(geometry = c(130, 130)) %>%
+                # newstomato_logo %>% image_resize(geometry = c(130, 130)) %>%
+                newstomato_logo |> image_resize('10%x10%') |>
                   image_transparent(color = 'white'),
-                offset = "+80+170", operator = "atop")
+                offset = "+80+140", operator = "atop")
 
 
 # 3. 텍스트 ------------------------------------------------------------

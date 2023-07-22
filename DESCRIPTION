@@ -1,6 +1,6 @@
 Package: bitTomato
 Title: Text data of articles published in News Tomato
-Version: 0.0.2.9000
+Version: 0.1.0.9000
 Date: 2023-07-22
 Authors@R: 
     c(person(given = "Choonghyun",
@@ -26,6 +26,3 @@ Author: Choonghyun Ryu [aut, cre],
   Kwangchun Lee [aut],
   NewsTomato [fnd]
 Maintainer: Choonghyun Ryu <choonghyun.ryu@gmail.com>
-
-
-

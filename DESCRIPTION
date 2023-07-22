@@ -24,7 +24,7 @@ RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 Author: Choonghyun Ryu [aut, cre],
   Kwangchun Lee [aut],
-  NewsTomato [cph]
+  NewsTomato [fnd]
 Maintainer: Choonghyun Ryu <choonghyun.ryu@gmail.com>
 
 

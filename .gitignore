@@ -2,7 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
-data-raw/뉴스토마토_데이터.xlsx
-data-raw/fonts/
-data-raw/.DS_Store
+뉴스토마토_데이터_230720.xlsx
 .DS_Store

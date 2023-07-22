@@ -1,6 +1,7 @@
 Package: bitTomato
 Title: Text data of articles published in News Tomato
-Version: 0.0.1.9000
+Version: 0.0.2.9000
+Date: 2023-07-22
 Authors@R: 
     c(person(given = "Choonghyun",
              family = "Ryu",
@@ -12,9 +13,9 @@ Authors@R:
              email = "kwangchun.lee.7@gmail.com"),
       person(given = "NewsTomato",
              role = "fnd"))
-Description: Text data created from news articles provided by the media company 
-NewsTomato. It includes examples of text analysis using this data, as well as 
-functions and vignettes.
+Description: Text data created from news articles provided by the media 
+  company NewsTomato. It includes examples of text analysis using this data, 
+  as well as functions and vignettes.
 License: 	GPL-3
 LazyData: true    
 Encoding: UTF-8

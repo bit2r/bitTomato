@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# bitTomato <img src="figures/logo.png" align="right" height="120" width="103.6"/>
+# bitTomato <img src="man/figures/logo.png" align="right" height="120" width="103.6"/>
 
 bitTomato는 "한글 텍스트 데이터 분석의 학습을 위한 실 데이터를 오픈소스로 제공"한다는 목적에 공감하는 뉴스토마토가 제공한 뉴스 기사를, 한국 R 사용자회가 저작 배포하는 R 패키지입니다.   
 

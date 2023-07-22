@@ -1,0 +1,18 @@
+pandoc: '2.8'
+pkgdown: 2.0.7
+pkgdown_sha: ~
+
+title: bitTomato
+
+template:
+  params:
+    bootswatch: cerulean
+
+reference:
+- title: bitTomato 패키지 개요
+  desc:  언론사인 뉴스토마토의 기사 데이터와 이를 이용한 텍스트분석 사례 등의 데이터 관련 컨텐츠.
+  contents:
+  - bitTomato-package
+- subtitle: 뉴스기사 데이터
+  contents:
+  - starts_with("tomato")

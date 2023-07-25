@@ -1,4 +1,29 @@
-# bitTomato 0.1.0.9000
+# bitTomato 0.2.0.9000
+
+## NEW FEATURES
+
+* "방울 토마토" 데이터셋 추가 (#12, thanks to @statkclee)
+    - 정치, 산업, 사회 3개 카테고리의 각 100개 샘플링 뉴스기사
+
+## MAJOR CHANGES
+
+* 정제 전후 데이터의 기준 변경 (#13)
+    - 기존의 정제 전 기사 본문 제거하고 (사용하지 않고),
+    - 기존의 정제 후 기사 본문을
+        - tomato_origin로,
+    - 기존의 정제 후 기사 본문 추가로 정제해서
+        - tomato로 배포
+    
+## BUG FIX
+
+* 데이터에서 기사 제목 및 기사 내용 정제 (#11, thanks to @statkclee)
+    - 중복되는 화이트스페이스
+    - 일부 HTML 코드
+    - 기사와 무관한 본문의 기자정보 및 기자 이메일 주소, 사진 출처
+    
+    
+    
+# bitTomato 0.1.0
 
 ## NEW FEATURES
 

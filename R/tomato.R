@@ -6,7 +6,7 @@
 #' @details
 #' 2020.01.01 ~ 2022.12.31까지의 3년치 기사 데이터로,
 #' tomato_origin 데이터셋의 기사는 정제되지 않은 기사로 HTML 태그 등이 포함되어 있으며,
-#' tomato 데이터셋의 기사는 어느 정도 정제된 기사로 HTML 태그 등이 어느 정도 정제되어 있음
+#' tomato 데이터셋의 기사는 어느 정도 정제된 기사로 HTML 태그 등이 정제되어 있음
 #'
 #' @format 164224 관측치와 각각 7개의 변수를 포함하는 tibble 객체임. 변수들은 다음과 같음.:
 #' \describe{
@@ -50,6 +50,13 @@ NULL
 #   ) |>
 #   mutate(create_dt = lubridate::as_datetime(create_dt, tz = "Asia/Seoul")) |>
 #   filter(create_dt >= "2020-01-01") |>
+#   mutate(title = str_remove_all(title, "&\\w+;")) |>
+#   mutate(title = str_squish(title)) |>
+#   mutate(contents_origin = contents) |>
+#   mutate(contents = str_remove_all(contents, "\\[[[:print:]]*\\]\\s*|&\\w+;")) |>
+#   mutate(contents = str_remove(contents, "\\w+ \\w*기자 [0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}")) |>
+#   mutate(contents = str_remove(contents, "사진/\\s*(\\w+\\s*){1,5}$")) |>
+#   mutate(contents = str_squish(contents)) |>
 #   arrange(create_dt)
 #
 # tomato_origin <- tomato |>
@@ -59,3 +66,8 @@ NULL
 #
 # save(tomato, file = "data/tomato.rda", compress = "xz")
 # save(tomato_origin, file = "data/tomato_origin.rda", compress = "xz")
+#
+# tomato |>
+#   select(contents) |>
+#   filter(row_number() <= 50) |>
+#   as.data.frame()

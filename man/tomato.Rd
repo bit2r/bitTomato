@@ -33,6 +33,6 @@ data(tomato_origin)
 \details{
 2020.01.01 ~ 2022.12.31까지의 3년치 기사 데이터로,
 tomato_origin 데이터셋의 기사는 정제되지 않은 기사로 HTML 태그 등이 포함되어 있으며,
-tomato 데이터셋의 기사는 어느 정도 정제된 기사로 HTML 태그 등이 어느 정도 정제되어 있음
+tomato 데이터셋의 기사는 어느 정도 정제된 기사로 HTML 태그 등이 정제되어 있음
 }
 \keyword{datasets}

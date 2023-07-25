@@ -15,4 +15,4 @@ reference:
   - bitTomato-package
 - subtitle: 뉴스기사 데이터
   contents:
-  - starts_with("tomato")
+  - ends_with("tomato")

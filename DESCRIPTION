@@ -1,6 +1,6 @@
 Package: bitTomato
 Title: Text data of articles published in News Tomato
-Version: 0.2.0.9000
+Version: 0.2.1.9000
 Date: 2023-07-25
 Authors@R: 
     c(person(given = "Choonghyun",

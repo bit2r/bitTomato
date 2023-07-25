@@ -8,7 +8,7 @@
 #' tomato_origin 데이터셋의 기사는 정제되지 않은 기사로 HTML 태그 등이 포함되어 있으며,
 #' tomato 데이터셋의 기사는 어느 정도 정제된 기사로 HTML 태그 등이 정제되어 있음
 #'
-#' @format 164224 관측치와 각각 7개의 변수를 포함하는 tibble 객체임. 변수들은 다음과 같음.:
+#' @format 164222 관측치와 각각 7개의 변수를 포함하는 tibble 객체임. 변수들은 다음과 같음.:
 #' \describe{
 #'   \item{title}{뉴스 기사 제목}
 #'   \item{url}{뉴스 기사 원본이 게시된 URL 주소}
@@ -31,22 +31,25 @@ NULL
 
 # library(tidyverse)
 #
-# tomato <- readxl::read_xlsx(
+# rows <- readxl::read_xlsx(
 #   "inst/data-raw/뉴스토마토_데이터_230720.xlsx",
 #   range = "R2C2:R164268C11",
 #   col_names = c("title", "url", "contents_origin", "contents_2", "contents_3",
-#                 "contents", "author", "create_dt", "category", "subcategory")) |>
+#                 "contents", "author", "create_dt", "category", "subcategory"),
+#   col_types = rep("text", 10)) |>
 #   select(-contents_2, -contents_3)
 #
-# tomato <- tomato |>
+# tomato <- rows |>
 #   filter(str_detect(create_dt, "-")) |>
 #   mutate(create_dt = glue::glue("{create_dt}:00")) |>
 #   bind_rows(
-#     tomato |>
+#     rows |>
 #       filter(!str_detect(create_dt, "-")) |>
-#       mutate(create_dt = str_split(create_dt, "\\.") |>
-#                unlist() |>
-#                (\(.) glue::glue("{janitor::excel_numeric_to_date(as.integer(.[1]))} {kimisc::seconds.to.hms(86400 * as.numeric(paste0('.', ifelse(is.na(.[2]), 0, .[2]))) + 1)}"))())
+#       mutate(create_ymd = janitor::excel_numeric_to_date(as.integer(str_remove(create_dt, "\\.\\w+$")))) |>
+#       mutate(create_hms = hms::new_hms(86400 * as.numeric(str_remove(create_dt, "^\\w+")) + 1)) |>
+#       mutate(create_hms = paste(substr(create_hms, 1, 5), "00", sep = ":")) |>
+#       mutate(create_dt = paste(create_ymd, create_hms)) |>
+#       select(-create_ymd, -create_hms)
 #   ) |>
 #   mutate(create_dt = lubridate::as_datetime(create_dt, tz = "Asia/Seoul")) |>
 #   filter(create_dt >= "2020-01-01") |>

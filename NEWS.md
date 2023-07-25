@@ -1,4 +1,4 @@
-# bitTomato 0.2.0.9000
+# bitTomato 0.2.1.9000
 
 ## NEW FEATURES
 
@@ -21,7 +21,9 @@
     - 일부 HTML 코드
     - 기사와 무관한 본문의 기자정보 및 기자 이메일 주소, 사진 출처
     
-    
+* 2022년 7월 8월 기사 누락 건 수정 (#14, thanks to @sens5900r)
+
+
     
 # bitTomato 0.1.0
 

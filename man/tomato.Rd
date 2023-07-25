@@ -5,7 +5,7 @@
 \alias{tomato}
 \title{뉴스토마토 뉴스 기사 데이터}
 \format{
-164224 관측치와 각각 7개의 변수를 포함하는 tibble 객체임. 변수들은 다음과 같음.:
+164222 관측치와 각각 7개의 변수를 포함하는 tibble 객체임. 변수들은 다음과 같음.:
 \describe{
 \item{title}{뉴스 기사 제목}
 \item{url}{뉴스 기사 원본이 게시된 URL 주소}

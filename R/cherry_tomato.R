@@ -47,9 +47,11 @@ NULL
 #   bind_rows(
 #     samples |>
 #       filter(!str_detect(create_dt, "-")) |>
-#       mutate(create_dt = str_split(create_dt, "\\.") |>
-#                unlist() |>
-#                (\(.) glue::glue("{janitor::excel_numeric_to_date(as.integer(.[1]))} {kimisc::seconds.to.hms(86400 * as.numeric(paste0('.', ifelse(is.na(.[2]), 0, .[2]))) + 1)}"))())
+#       mutate(create_ymd = janitor::excel_numeric_to_date(as.integer(str_remove(create_dt, "\\.\\w+$")))) |>
+#       mutate(create_hms = kimisc::seconds.to.hms(86400 * as.numeric(str_remove(create_dt, "^\\w+")) + 1)) |>
+#       mutate(create_hms = paste(substr(create_hms, 1, 5), "00", sep = ":")) |>
+#       mutate(create_dt = paste(create_ymd, create_hms)) |>
+#       select(-create_ymd, -create_hms)
 #   ) |>
 #   mutate(create_dt = lubridate::as_datetime(create_dt, tz = "Asia/Seoul")) |>
 #   filter(create_dt >= "2020-01-01") |>
@@ -77,6 +79,7 @@ NULL
 #   filter(len_contents > desc_stat$q25 & len_contents < desc_stat$q75) |>
 #   group_by(category) |>
 #   slice_sample(n = 100) |>
+#   ungroup() |>
 #   select(-len_contents, -len_title)
 #
 # save(cherry_tomato, file = "data/cherry_tomato.rda")

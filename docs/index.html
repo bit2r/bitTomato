@@ -42,7 +42,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">bitTomato</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.1.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.3.1.9000</span>
       </span>
     </div>
 
@@ -85,14 +85,11 @@
 <h2 id="데이터-현황">데이터 현황<a class="anchor" aria-label="anchor" href="#%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%98%84%ED%99%A9"></a>
 </h2>
 <ul>
-<li>기간: 2020.01.01 ~ 2022.12.31 (3년치)</li>
-<li>건수: 164,222</li>
-<li>기사내용: 기사 제목과 본문
+<li>토마토(tomato) 데이터
 <ul>
-<li>기사 본문은 HTML 태크 등 전처리하지 않은 본문과 전처리한 본문의 데이터셋으로 분리 배포</li>
-<li>전처리하지 않은 본문 데이터셋은 텍스트 전처리 학습으로 활용 가능</li>
-</ul>
-</li>
+<li>기간: 2020.01.01 ~ 2022.12.31 (3년치)</li>
+<li>건수: 160,502</li>
+<li>기사내용: 기사 제목과 본문</li>
 <li>개별 기사 메타데이터:
 <ul>
 <li>기사 원문 URL</li>
@@ -100,6 +97,35 @@
 <li>기사 작성자</li>
 <li>기사 중분류</li>
 <li>기사 분류</li>
+</ul>
+</li>
+<li>데이터셋 이름: tomato<br>
+</li>
+</ul>
+</li>
+<li>방울토마토(cherry tomato) 데이터
+<ul>
+<li>토마토 데이터셋에서 정치, 산업, 사회 3개 카테고리 각 100건 샘플</li>
+<li>건수: 300</li>
+<li>데이터셋 이름: cherry_tomato</li>
+</ul>
+</li>
+<li>못생긴 토마토 데이터
+<ul>
+<li>상품성이 떨어지지만 무농약 친환경 데이터셋
+<ul>
+<li>토마토 데이터보다 상대적으로 정제가 덜된 기사 데이터로,</li>
+<li>다른 컬럼은 토마토 데이터와 동일함</li>
+<li>데이터 정제를 좀더 학습하기 위한 사용자용 데이터</li>
+</ul>
+</li>
+<li>
+<strong>패키지에는 포함되지 않으며, github 리파지토리의 orign_data 디렉토리에 배포</strong>
+<ul>
+<li>패키지 설치에 포함되지 않으므로 사용을 위해서는,</li>
+<li>별도로 tomato_origin.rda 파일을 다운로드해야 함</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -158,6 +184,7 @@
 <li>Choonghyun Ryu <br><small class="roles"> Author, maintainer </small>  </li>
 <li>Kwangchun Lee <br><small class="roles"> Author </small>  </li>
 <li>NewsTomato <br><small class="roles"> Funder </small>  </li>
+<li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
 

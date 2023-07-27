@@ -14,8 +14,8 @@ as well as functions and vignettes.
 \tabular{ll}{
 Package: \tab bitTomato\cr
 Type: \tab Package\cr
-Version: \tab 0.1.0\cr
-Date: \tab 2023-07-22\cr
+Version: \tab 0.3.1\cr
+Date: \tab 2023-07-28\cr
 License: \tab GPL-3\cr
 }
 }

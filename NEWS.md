@@ -1,3 +1,11 @@
+# bitTomato 0.3.1
+
+## BUG FIX
+
+* 기사 누락 데이터 제거 (#16, thanks to @jowoncni1)
+    
+    
+    
 # bitTomato 0.3.0
 
 ## MAJOR CHANGES

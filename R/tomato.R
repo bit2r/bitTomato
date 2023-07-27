@@ -10,7 +10,7 @@
 #' 길이가 25분위에서 75분위 사이 각각 100개 뉴스기사를 추출함. (300 관측치)
 #' 데이터셋의 이름은 작은 크기의 데이터셋이므로 방울토마토(cherry tomato)로 명명함.
 #'
-#' @format 160,936 관측치와 7개의 변수를 포함하는 tibble 객체임. 변수들은 다음과 같음.:
+#' @format 160,502 관측치와 7개의 변수를 포함하는 tibble 객체임. 변수들은 다음과 같음.:
 #' \describe{
 #'   \item{title}{뉴스 기사 제목}
 #'   \item{url}{뉴스 기사 원본이 게시된 URL 주소}
@@ -61,6 +61,7 @@ NULL
 #   mutate(contents = str_remove(contents, "\\w+ \\w*기자 [0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}")) |>
 #   mutate(contents = str_remove(contents, "사진/\\s*(\\w+\\s*){1,5}$")) |>
 #   mutate(contents = str_squish(contents)) |>
+#   drop_na() |>
 #   arrange(create_dt)
 #
 # tomato_origin <- tomato |>

@@ -1,2 +1,8 @@
 ^bitTomato\.Rproj$
 ^\.Rproj\.user$
+^inst/data-raw
+^inst/hexlogo
+^README\.md$
+^README\.Rmd$
+^pkgdown
+^origin-data

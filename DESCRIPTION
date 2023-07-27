@@ -1,7 +1,7 @@
 Package: bitTomato
 Title: Text data of articles published in News Tomato
-Version: 0.2.1.9000
-Date: 2023-07-25
+Version: 0.3.0.9000
+Date: 2023-07-27
 Authors@R: 
     c(person(given = "Choonghyun",
              family = "Ryu",
@@ -11,12 +11,17 @@ Authors@R:
              family = "Lee",
              role = "aut",
              email = "kwangchun.lee.7@gmail.com"),
+      person(given = "Jongwha",
+             family = "Shin",
+             role = "ctb",
+             email = "charlie@r2bit.com"),             
       person(given = "NewsTomato",
              role = "fnd"))
 Description: Text data created from news articles provided by the media 
   company NewsTomato. It includes examples of text analysis using this data, 
   as well as functions and vignettes.
-License: 	GPL-3
+Depends: R (>= 3.5.0)  
+License: GPL-3
 LazyData: true    
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -24,5 +29,6 @@ RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 Author: Choonghyun Ryu [aut, cre],
   Kwangchun Lee [aut],
+  Jongwha Shin [ctb],  
   NewsTomato [fnd]
 Maintainer: Choonghyun Ryu <choonghyun.ryu@gmail.com>

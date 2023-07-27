@@ -1,4 +1,15 @@
-# bitTomato 0.2.1.9000
+# bitTomato 0.3.0
+
+## MAJOR CHANGES
+
+* 데이터셋 재정비 (#15)
+    - tomato_origin은 github repository에 올리되, 패키지 빌드에는 제외
+        - 용량 문제로 패키지 설치 시간이 오래 걸림
+    - 광고성 기사인 기자 이름이 "인포머셜"인 관측치 제거
+
+
+
+# bitTomato 0.2.1
 
 ## NEW FEATURES
 

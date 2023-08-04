@@ -13,7 +13,7 @@ Authors@R:
              email = "kwangchun.lee.7@gmail.com"),
       person(given = "Jongwha",
              family = "Shin",
-             role = "ctb",
+             role = "aut",
              email = "charlie@r2bit.com"),             
       person(given = "NewsTomato",
              role = "fnd"))
